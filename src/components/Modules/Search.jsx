@@ -38,11 +38,12 @@ function Search({currencies, setCurrencies}) {
             </select>
             <div>
                 <ul>
-                    {coins.map((coin) => (
-                        <li key={coin.id}>
+                    {coins.length > 0 ?
+                        coins.map((coin) => ((<li key={coin.id}>
                             <img src={coin.thumb} alt={coin.name}/>
                             <p>{coin.name}</p>
-                        </li>))}
+                        </li>)))
+                        : null}
                 </ul>
             </div>
         </div>
